@@ -29,6 +29,6 @@ opciók:
 
 -f : Rögzített hossz megadása a sorrendre vonatkozó szám esetán, pl: ha az értéke 2 akkor az első kettő helyiértéket nem növeli
 
--n : Megadja hogy hányszor növelje a sorrendre vonatkozó számot.
+-n : Megadja hogy hányszor növelje a sorrendre vonatkozó számot
 
 -r : A helyzetre vonatkozó formázott string
