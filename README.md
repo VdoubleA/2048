@@ -12,6 +12,7 @@
      \__\/        \__\/                 \__\/        \__\/        \__\/   
 ```
 interpreter: python 3
+
 moudules: terminaltables
 
 Ez a program a 2020-as évi Matech-verseny második fordulójának előfeladatának megoldásásra készült. A kérdéses probléma a 2048 nevű játék bizonyos állásából a következő 2-hatvány elérésére vonatkozik. A program alapértelmezett beállításai a feladatban meghatározott játékállásra vonatkoznak, de lehetőséget ad másik állások vizsgálatára is.
