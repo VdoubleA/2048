@@ -57,7 +57,6 @@ def function(table, direction, number, case, goal, rule):
                         for i in range(m, lil_end, -x):
                             table[n][i] = table[n][i - x]
                         table[n][lil_end] = -1
-                        ept += 1
 
                         m += x
                     m += x
@@ -71,7 +70,6 @@ def function(table, direction, number, case, goal, rule):
                         for i in range(m, lil_end, -y):
                             table[i][n] = table[i - y][n]
                         table[lil_end][n] = -1
-                        ept += 1
 
                         m += y        
                     m += y
@@ -79,6 +77,11 @@ def function(table, direction, number, case, goal, rule):
         insert = 2
         if len(case) > number and case[-(number + 1)] == '1':
             insert = 4
+
+        for n in range(0, 4):
+            for m in range(0, 4):
+                if table[n][m] == -1:
+                    ept += 1
         
         if ept == -1:
             return False
@@ -101,8 +104,6 @@ def function(table, direction, number, case, goal, rule):
                     if table[n][m] == -1:
                         if idx == 0:
                             table[n][m] = insert
-                        else:
-                            table[n][m] = 0
                         idx -= 1
                     elif table[n][m] == goal:
                         return ';'
@@ -140,7 +141,7 @@ def main():
                 if table[n][m] > goal:
                     goal = table[n][m]
                 elif table[n][m] < 2:
-                    table[n][m] = 0
+                    table[n][m] = -1
         goal *= 2
         fixed = 1
         case = 0
